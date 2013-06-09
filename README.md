@@ -1,2 +1,83 @@
 https://toolbelt.herokuapp.com/
 https://github.com/autokad/omrails
+
+society is quickly dividing into two groups
+1 those who know how to code - they can manipulate the very structure of the world around them
+2 those who dont, their lives are being designed and directed by those that do
+entrepreneours guide to customer development
+
+front end html css javascript
+back end php ruby python SQL
+web application frameworks
+	ruby on rails
+	Django
+
+	its ok to not understand something the first time
+
+	Ruby on Rails Tutorial by Michael Hartl
+	Web Applications by John Ousterhout at Stanford University
+	rails casts
+	
+	hackathons
+	
+rails server
+
+git push heroku master
+
+bundle install --without production
+git add .
+git commit -am "add pg gem to heroku"
+git push
+git push heroku master
+
+
+
+
+rails generate controller Pages home
+in browser:	http://localhost:3000/pages/home
+
+in routes.rb:  root :to => 'Pages#home'
+
+http://twitter.github.io/bootstrap/
+could put in vendor
+https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/README.md
+
+gem 'bootstrap-sass', '~> 2.3.1.3'
+bundle install
+this installs all gems from the web
+need to create style sheet to import it
+create styles.css.scss
+	add	@import 'bootstrap';
+	add @import 'bootstrap-responsive';
+restart server
+	rails s
+update javascripts-application.js
+	add //= require bootstrap
+http://twitter.github.io/bootstrap/scaffolding.html
+	add <div class="container"> to application.html.erb around the yield tags.
+update header:
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+ 
+    	<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+    	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	    	<span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+      	</a>
+ 
+	    <!-- Be sure to leave the brand out there if you want it shown -->
+	    <a class="brand" href="#">Project name</a>
+ 
+      	<!-- Everything you want hidden at 940px or less, place within here -->
+		<div class="nav-collapse collapse">
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+	        <ul class="nav">
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "About", about_path %></li>
+	        </ul>
+      	</div>
+    </div>
+  </div>
+</div>
