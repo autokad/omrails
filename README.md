@@ -121,3 +121,14 @@ this is an authentication gem.
 		update the views-devise-sessions-new.html.erb
 			change	form_for	to	simple_form_for
 		
+		add user name
+			generate our own migration
+				rails generate migration AddNameToUsers name:string
+				rake db:migrate
+				
+		Want to generate our own code, pins like in pinterest
+			need to runrails generate scaffold Pins description:string -- skipp-stylesheets
+				creates controler for pin, model, views, migration
+			need to run rake db:migrate
+				this is how most resources work, create, show (read), update, destroy pin (CRUD)
+			
