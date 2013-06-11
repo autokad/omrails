@@ -56,7 +56,8 @@ update javascripts-application.js
 http://twitter.github.io/bootstrap/scaffolding.html
 	add <div class="container"> to application.html.erb around the yield tags.
 update header:
-<div class="navbar">
+
+<div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
  
@@ -81,3 +82,42 @@ update header:
     </div>
   </div>
 </div>
+
+to styles.css.scss:
+
+
+Need gem devise: https://github.com/plataformatec/devise
+this is an authentication gem.
+	add gem 'devise'	to gem file
+	in cmd, type bundle install
+	in cmd type rails generate devise:install
+	
+	update config/environments/development.rb and production.rb by adding:
+		# In production, :host should be set to the actual host of your application
+		config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+		
+	If you are deploying Rails 3.1+ on Heroku, you may want to set:
+		config.assets.initialize_on_precompile = false
+
+	run in cmd: rails generate devise User
+	
+	run in cmd: rake db:migrate or bundle exec rake db:migrate
+	
+	check routes with rake routes in cmd
+	
+	restart server
+	
+	update register now button:	 new_user_registration_path
+	update login button:	new_user_session_path
+
+	run rails generate devise:views  for better views
+	
+	
+	simple form gem: to make forms look much better
+		https://github.com/plataformatec/simple_form/blob/master/README.md
+		check read me, see instructions, says add this to gem file: gem 'simple_form'
+		run budnle install in cmd
+		run rails generate simple_form:install --bootstrap
+		update the views-devise-sessions-new.html.erb
+			change	form_for	to	simple_form_for
+		
