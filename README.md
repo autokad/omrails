@@ -1,3 +1,13 @@
+1. Ruby on Rails 3 Essential Training by Kevin Skoglund
+	http://www.lynda.com/Ruby-on-Rails-3-tutorials/essential-training/55960-2.html
+2. Ruby on Rails Tutorial by Michael Hartl
+	http://ruby.railstutorial.org/ruby-on-rails-tutorial-book
+3. Web Applications by John Ousterhout at Stanford University
+	http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=WebApplications
+4. RailsCasts by Ryan Bates
+	http://railscasts.com/
+
+
 https://toolbelt.herokuapp.com/
 https://github.com/autokad/omrails
 
@@ -131,4 +141,13 @@ this is an authentication gem.
 				creates controler for pin, model, views, migration
 			need to run rake db:migrate
 				this is how most resources work, create, show (read), update, destroy pin (CRUD)
+			
+			-- associating users with pins
+			cmd:	rails console
+			
+			-- need to set up relationshp between pins and users
+				-- update the models for pins and users
+					-- user has_many :pins
+					-- pin belongs_to :user
+					-- rails associations (read about##)
 			
